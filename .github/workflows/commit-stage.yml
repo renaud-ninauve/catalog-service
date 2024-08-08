@@ -30,7 +30,5 @@ jobs:
         if: success() || failure()
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
-      - name: Build, unit and integration tests
-        run: |
-          chmod a+x mvnw
-          ./mvnw build
+      - name: Build with Maven
+        run: mvn --batch-mode --update-snapshots verify
