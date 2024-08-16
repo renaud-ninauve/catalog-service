@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      request-connect-timeout: 100
+      request-read-timeout: 100
+  datasource:
+    url: jdbc:tc:postgresql:16.4:///
